@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaNa.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Seitenmenü -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+    <ul class="menu-list">
+      <li><a href="#">Startseite</a></li>
+      <li><a href="#">Politik</a></li>
+      <li><a href="#">Wirtschaft</a></li>
+      <li><a href="#">Kultur</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="logo">MaNa.</div>
+      <nav class="top-icons">
+        <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+        <button class="icon-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1 class="greeting">Willkommen</h1>
+
+      <!-- Artikel-Card -->
+      <article class="card">
+        <img class="card-img" src="fischer.webp" alt="Porträt">
+        <div class="card-content">
+          <div class="card-tag">Dachzeile</div>
+          <h2 class="card-title">Eine Headline unserer geliebten Redaktion mit bis zu drei Zeilen</h2>
+          <div class="card-footer">
+            <img class="card-author-img" src="https://placehold.co/24x24" alt="Autor">
+            <span class="card-author">Von Martin Trotz</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Weitere Cards -->
+      <article class="card">
+        <img class="card-img" src="merz.jpg" alt="">
+        <div class="card-content">
+          <div class="card-tag">Dachzeile</div>
+          <h2 class="card-title">Vier Erkenntnisse aus der Rede des Kanzlers</h2>
+          <div class="card-footer">
+            <img class="card-author-img" src="https://placehold.co/24x24" alt="Autor">
+            <span class="card-author">Von Urs Fischer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card-img" src="heidi.jpg" alt="">
+        <div class="card-content">
+          <div class="card-tag">Dachzeile</div>
+          <h2 class="card-title">Olaf Scholz: Kritik an üppiger Ausstattung für Kanzlerbüro</h2>
+          <div class="card-footer">
+            <img class="card-author-img" src="https://placehold.co/24x24" alt="Autor">
+            <span class="card-author">Von Thorsten Müller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card-img" src="lauterbach.jpg" alt="">
+        <div class="card-content">
+          <div class="card-tag">Dachzeile</div>
+          <h2 class="card-title">Linkspartei will Reichinnek-Wahl im Bundestag erzwingen</h2>
+          <div class="card-footer">
+            <img class="card-author-img" src="https://placehold.co/24x24" alt="Autor">
+            <span class="card-author">Von Heinz Jemand</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Follow Section -->
+      <section class="follow-section">
+        <h2>MaNa. folgen</h2>
+        <div class="follow-icons">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+        <div class="brand-bar">
+          <div class="bar-grey"></div>
+          <div class="bar-pink"></div>
+        </div>
+        <img src="https://placehold.co/106x40" alt="Logo" class="brand-logo">
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.add('open');
+      overlay.classList.add('visible');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('visible');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('visible');
+    });
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      alert('Suche geöffnet!');
+    });
+  </script>
+</body>
+</html>
