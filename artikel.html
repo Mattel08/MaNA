@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MaNa. – Artikel</title>
+  <link rel="stylesheet" href="artikel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="top-bar">
+    <a href="index.html"><div class="logo">MaNa.</div></a>
+    <nav class="top-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-bars"></i>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <section class="article-header">
+      <p class="article-category">Politik • Ukraine</p>
+      <h1 class="article-title">
+        Gregor Gysi und Karl Lauterbach diskutieren über Sozialpolitik <br />
+        und den richtigen Ukraine-Kurs
+      </h1>
+      <img src="lauterbach.jpg" alt="Karl Lauterbach" class="article-image" />
+    </section>
+
+    <div class="article-controls">
+      <select>
+        <option>kurzer Text</option>
+<option>langer Text</option>
+      </select>
+      <div class="article-actions">
+        <i class="fas fa-share-alt"></i>
+        <i class="far fa-bookmark"></i>
+      </div>
+    </div>
+
+    <section class="article-text">
+      <h2>Text</h2>
+      <p>
+        Ein Text zu diesem Bild ... lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis. Aenean commodo ligula eget dolor. 
+Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+      </p>
+    </section>
+
+    <section class="comments-section">
+      <div class="comment-form">
+        <img class="ok" src="Mann2.jpg" alt="User" height="40px" width="40px">
+        <input type="text" placeholder="Schreiben Sie uns Ihre Meinung." />
+        <i class="fas fa-paper-plane"></i>
+      </div>
+
+      <div class="comment">
+        <i class="fas fa-user-circle fa-2x"></i>
+        <p>Dies ist ein Kommentar mit sehr gutem Inhalt</p>
+        <div class="comment-actions">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment"></i>
+        </div>
+      </div>
+
+      <div class="comment">
+        <i class="fas fa-user-circle fa-2x"></i>
+        <p>Dies ist ein Kommentar mit sehr gutem Inhalt</p>
+        <div class="comment-actions">
+          <i class="fas fa-heart" style="color: red;"></i>
+          <i class="far fa-comment"></i>
+        </div>
+      </div>
+
+      <div class="comment">
+        <i class="fas fa-user-circle fa-2x"></i>
+        <p>Dies ist ein Kommentar mit sehr gutem Inhalt</p>
+        <div class="comment-actions">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="follow-section">
+      <h2>MaNa. folgen</h2>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-spotify"></i>
+      </div>
+      <div class="footer-credits">
+        <p>licenced by <strong>Telekom</strong></p>
+        <p><span class="eco">co2</span> neutrale</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.add('open');
+      overlay.classList.add('visible');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('visible');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('visible');
+    });
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      alert('Suche geöffnet!');
+    });
+  </script>
+</body>
+</html>
