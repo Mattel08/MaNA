@@ -13,7 +13,6 @@ body {
   color: var(--text-light);
 }
 
-
 .top-bar {
   background: #474c59;
   padding: 16px;
@@ -135,8 +134,7 @@ body {
   border-top: 1px solid #fff;
   padding: 24px 0;
   text-align: center;
-color: #ffffffs;
-
+  color: #ffffff;
 }
 
 .social-icons {
@@ -144,7 +142,6 @@ color: #ffffffs;
   justify-content: space-evenly;
   font-size: 20px;
   margin: 16px 0;
-
 }
 
 .footer-credits {
@@ -157,6 +154,19 @@ color: #ffffffs;
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ok {
+  border-radius: 100%;
+}
+
+.liked {
+  color: red !important;
+}
+/* Slide-in Menü */
 .side-menu {
   position: fixed;
   top: 0;
@@ -188,6 +198,7 @@ color: #ffffffs;
 .menu-list {
   list-style: none;
   padding: 0;
+color: black;
 }
 
 .menu-list li {
@@ -218,11 +229,3 @@ color: #ffffffs;
   opacity: 1;
   visibility: visible;
 }
-a { text-decoration: none; 
- color: inherit
-}
-.ok{
-border-top-left-radius: 100%;
-	border-top-right-radius: 100%;
-	border-bottom-left-radius: 100%;
-	border-bottom-right-radius: 100%;}

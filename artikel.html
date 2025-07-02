@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -9,11 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+<!-- Seitenmenü -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+    <ul class="menu-list">
+      <li><a href="#">Startseite</a></li>
+      <li><a href="artikel.html">Politik</a></li>
+      <li><a href="#">Wirtschaft</a></li>
+      <li><a href="#">Kultur</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
   <header class="top-bar">
     <a href="index.html"><div class="logo">MaNa.</div></a>
     <nav class="top-icons">
-      <i class="fas fa-search"></i>
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-search" id="searchBtn"></i>
+      <i class="fas fa-bars" id="menuBtn"></i>
     </nav>
   </header>
 
@@ -30,10 +43,10 @@
     <div class="article-controls">
       <select>
         <option>kurzer Text</option>
-<option>langer Text</option>
+        <option>langer Text</option>
       </select>
       <div class="article-actions">
-        <a href="whatsapp://send?text=Hier&nbsp;meine%20Internetseite.https://html-preview.github.io/?url=https://raw.githubusercontent.com/Mattel08/MaNA/main/artikel.html"><i class="fas fa-share-alt"></i> </a>
+        <a href="whatsapp://send?text=Hier&nbsp;meine%20Internetseite.https://html-preview.github.io/?url=https://raw.githubusercontent.com/Mattel08/MaNA/main/artikel.html"><i class="fas fa-share-alt"></i></a>
         <i class="far fa-bookmark"></i>
       </div>
     </div>
@@ -44,9 +57,9 @@
         Ein Text zu diesem Bild ... lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
         dis parturient montes, nascetur ridiculus mus. Donec quam felis. Aenean commodo ligula eget dolor. 
-Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus. Donec quam felis. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        Donec quam felis. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis.
       </p>
     </section>
 
@@ -70,7 +83,7 @@ Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et 
         <i class="fas fa-user-circle fa-2x"></i>
         <p>Dies ist ein Kommentar mit sehr gutem Inhalt</p>
         <div class="comment-actions">
-          <i class="fas fa-heart" style="color: red;"></i>
+          <i class="far fa-heart"></i>
           <i class="far fa-comment"></i>
         </div>
       </div>
@@ -123,8 +136,20 @@ Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et 
       overlay.classList.remove('visible');
     });
 
-    document.getElementById('searchBtn').addEventListener('click', () => {
-      alert('Suche geöffnet!');
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        alert('Suche geöffnet!');
+      });
+    }
+
+    // ❤️ Herz-Klick-Funktionalität
+    document.querySelectorAll('.fa-heart').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('liked');
+        button.classList.toggle('far');
+        button.classList.toggle('fas');
+      });
     });
   </script>
 </body>
